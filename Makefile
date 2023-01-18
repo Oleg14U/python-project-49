@@ -1,7 +1,7 @@
 install:
 	poetry install
 brain-games:
-	poetry run rain-games
+	poetry run brain-games
 build:
 	poetry build
 publish:
