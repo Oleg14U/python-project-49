@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "Math and Logic games"
+authors = ["Oleg14U  <hohleghek@yandex.ru>"]
 readme = "README.md"
 packages = [{ include ="brain_games" }]
+repository = "https://github.com/Oleg14U/python-project-49/"
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -17,6 +18,7 @@ wemake-python-styleguide = "^0.17.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
