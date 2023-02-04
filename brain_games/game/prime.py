@@ -14,7 +14,7 @@ def prime_number(num):
 
 
 def game(name):
-    print('Answer "yes" if given number is prime. Otherwise answer "no"')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     for i in range(0, 3):
         num = random_nember()
         print(f"Question: {num}")
