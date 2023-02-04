@@ -1,3 +1,5 @@
+
+
 import random
 import prompt
 
@@ -8,7 +10,7 @@ def welcome():
 
 def yours_name():
     name = prompt.string('May I have your name? ')
-    print("Hello " + name + "!")
+    print("Hello, " + name + "!")
     return name
 
 
