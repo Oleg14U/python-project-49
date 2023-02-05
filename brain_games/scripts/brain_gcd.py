@@ -3,7 +3,6 @@ from brain_games.game.even import yours_name
 from brain_games.game.gcd import game
 
 
-
 def main():
     welcome()
     print(game(yours_name()))
