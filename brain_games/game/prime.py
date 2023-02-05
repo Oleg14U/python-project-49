@@ -1,5 +1,4 @@
 from brain_games.game.calc import random_nember
-from brain_games.game.even import yours_name
 
 
 def prime_number(num):

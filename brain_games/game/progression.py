@@ -1,4 +1,3 @@
-from brain_games.game.even import yours_name
 import random
 
 

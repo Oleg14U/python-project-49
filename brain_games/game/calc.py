@@ -1,4 +1,3 @@
-from brain_games.game.even import yours_name
 import random
 
 
@@ -30,4 +29,3 @@ def game(name):
             print(f"{answer}  is wrong answer ;(. Correct answer was {result}")
             return f"Let's try again, {name}!"
     return f"Congratulations, {name}!"
-

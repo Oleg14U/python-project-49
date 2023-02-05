@@ -1,5 +1,6 @@
 from brain_games.game.calc import random_nember
 
+
 def greatest_common_divisor(a, b):
     while a != 0 and b != 0:
         if (a > b):
@@ -23,5 +24,3 @@ def game(name):
             print(f"{answer}  is wrong answer ;(. Correct answer was {result}")
             return f"Let's try again, {name}!"
     return f"Congratulations, {name}!"
-
-
