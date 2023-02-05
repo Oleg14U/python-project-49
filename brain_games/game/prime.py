@@ -25,4 +25,3 @@ def game(name):
             print(f"{answer}  is wrong answer ;(. Correct answer was {result}")
             return f"Let's try again, {name}!"
     return f"Congratulations, {name}!"
-
