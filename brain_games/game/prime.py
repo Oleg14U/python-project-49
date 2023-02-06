@@ -21,6 +21,9 @@ def game(name):
         answer = input("Your answer: ")
         if (answer == result):
             print("Correct!")
+        elif: (answer == 1):
+            print(f"{answer}  is wrong answer ;(. Correct answer was {result}")
+            return f"Let's try again, {name}!"
         else:
             print(f"{answer}  is wrong answer ;(. Correct answer was {result}")
             return f"Let's try again, {name}!"
