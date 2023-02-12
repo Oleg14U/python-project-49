@@ -1,25 +1,20 @@
 import random
 
-
-def create_geometric_progression():
-    begin = random.randint(1, 150)
-    q = random.randint(1, 5)
-    return [str(begin + i * q) for i in range(10)]
+RULE = 'What number is missing in the progression?'
 
 
-def game(name):
-    print("What number is missing in the progression?")
-    for i in range(3):
-        progression = create_geometric_progression()
-        question = random.randint(0, 9)
-        result = progression[question]
-        progression.remove(result)
-        progression.insert(question, '..')
-        print("Question: " + ' '.join(progression))
-        answer = input("Your answer: ")
-        if (answer.isdigit() is True and int(answer) == int(result)):
-            print("Correct!")
-        else:
-            print(f"{answer}  is wrong answer ;(. Correct answer was {result}")
-            return f"Let's try again, {name}!"
-    return f"Congratulations, {name}!"
+def get_numbers():
+    progression = []
+
+    num1 = random.randint(1, 8)
+    num2 = random.randint(45, 57)
+
+    step = random.randint(2, 5)
+
+    for i in range(num1, num2, step):
+        progression.append(i)
+    random_index = random.randint(1, 10)
+    answer = str(progression[random_index])
+    progression[random_index] = '..'
+    question = ' '.join(map(str, progression[0:10]))
+    return question, answer

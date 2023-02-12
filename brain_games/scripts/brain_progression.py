@@ -1,11 +1,9 @@
-from brain_games.game.even import welcome
-from brain_games.game.even import yours_name
-from brain_games.game.progression import game
+import brain_games.game.prog
+from brain_games.game_engine import play
 
 
 def main():
-    welcome()
-    print(game(yours_name()))
+    play(brain_games.game.prog)
 
 
 if __name__ == '__main__':

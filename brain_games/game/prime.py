@@ -1,29 +1,13 @@
-from brain_games.game.calc import random_nember
+import random
+
+RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def prime_number(num):
-    k = 0
-    for i in range(2, num // 2 + 1):
-        if (num % i == 0):
-            k = k + 1
-    if (k <= 0):
-        return "yes"
-    elif (num == 1):
-        return "no"
-    else:
-        return "no"
-
-
-def game(name):
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    for i in range(0, 3):
-        num = random_nember()
-        print(f"Question: {num}")
-        result = prime_number(num)
-        answer = input("Your answer: ")
-        if (answer == result):
-            print("Correct!")
-        else:
-            print(f"{answer}  is wrong answer ;(. Correct answer was {result}")
-            return f"Let's try again, {name}!"
-    return f"Congratulations, {name}!"
+def get_numbers():
+    question = random.randint(2, 50)
+    answer = 'yes'
+    for i in range(2, int(question / 2) + 1):
+        if (question % i) == 0:
+            answer = 'no'
+            break
+    return question, answer

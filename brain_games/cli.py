@@ -1,6 +1,7 @@
-def wellcome_user():
-    name = ''
-    while name == '':
-        print('May I have your name? ', end='')
-        name = input()
+import prompt
+
+
+def welcome_user():
+    global name
+    name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')

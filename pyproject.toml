@@ -8,7 +8,7 @@ packages = [{ include ="brain_games" }]
 repository = "https://github.com/Oleg14U/python-project-49/"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.8.10"
 prompt = "^0.4.1"
 
 
