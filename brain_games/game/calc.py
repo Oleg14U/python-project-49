@@ -19,4 +19,4 @@ def get_numbers():
     else:
         answer = num1 * num2
     answer = str(answer)
-    return question, 
+    return question, answer
