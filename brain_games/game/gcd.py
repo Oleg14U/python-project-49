@@ -1,5 +1,5 @@
 import random
-
+from math import gcd
 
 RULE = 'Find the greatest common divisor of given numbers.'
 
