@@ -1,19 +1,24 @@
-import random
+from random import randint
+
 
 RULE = 'What number is missing in the progression?'
+MIN_NUMBER_STEP = 1  # Min step
+MAX_NUMBER_STEP = 5  # Max step
+START_NUMBER = randint(1, 20)  # Initial number
+STOP_NUMBER = randint(60, 100)  # End number
+LENGTH = 10  # Amount of numbers
 
 
-def get_numbers():
-    progression = []
+def generate_progression(start, stop, step):
+    progression = list(range(start, stop, step))[:LENGTH]
+    return progression
 
-    num1 = random.randint(1, 8)
-    num2 = random.randint(45, 57)
-    step = random.randint(5, 10)
 
-    for i in range(num1, num2, step):
-        progression.append(i)
-    random_index = random.randint(1, 10)
-    answer = str(progression[random_index])
-    progression[random_index] = '..'
-    question = ' '.join(map(str, progression[0:10]))
-    return question, answer
+def generate_round():
+    step = randint(MIN_NUMBER_STEP, MAX_NUMBER_STEP)
+    progression = generate_progression(START_NUMBER, STOP_NUMBER, step)
+    index = randint(0, len(progression) - 1)
+    correct_answer = progression[index]
+    progression[index] = '..'
+    question = ' '.join(str(i) for i in progression)
+    return question, str(correct_answer)
