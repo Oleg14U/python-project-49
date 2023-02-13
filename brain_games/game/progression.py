@@ -8,8 +8,7 @@ def get_numbers():
 
     num1 = random.randint(1, 8)
     num2 = random.randint(45, 57)
-
-    step = random.randint(2, 5)
+    step = random.randint(5, 10)
 
     for i in range(num1, num2, step):
         progression.append(i)
