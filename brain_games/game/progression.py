@@ -1,16 +1,16 @@
 from random import randint
 
 
-RULE = 'What number is missing in the progression?'
-MIN_NUMBER_STEP = 1  # Min step
-MAX_NUMBER_STEP = 5  # Max step
-START_NUMBER = randint(1, 20)  # Initial number
-STOP_NUMBER = randint(60, 100)  # End number
-LENGTH = 10  # Amount of numbers
+DESCRIPTION = 'What number is missing in the progression?'
+MIN_NUMBER_STEP = 1
+MAX_NUMBER_STEP = 5
+START_NUMBER = randint(1, 20)
+STOP_NUMBER = randint(60, 100)
+LENGTH = 10
 
 
 def generate_progression(start, stop, step):
-    progression = list(range(start, stop, step))[5:LENGTH]
+    progression = list(range(start, stop, step))[:LENGTH]
     return progression
 
 

@@ -1,13 +1,20 @@
-import random
+from random import randint
 
-RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+MIN_NUMBER = 1
+MAX_NUMBER = 10
 
 
-def get_numbers():
-    question = random.randint(2, 50)
-    answer = 'yes'
-    for i in range(2, int(question / 2) + 1):
-        if (question % i) == 0:
-            answer = 'no'
-            break
-    return question, answer
+def is_prime(num):
+    if num <= 1:
+        return False
+    divider = 2
+    while num % divider != 0:
+        divider += 1
+    return divider == num
+
+
+def generate_round():
+    num = randint(MIN_NUMBER, MAX_NUMBER)
+    correct_answer = 'yes' if is_prime(num) else 'no'
+    return str(num), correct_answer
