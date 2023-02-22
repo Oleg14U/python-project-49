@@ -1,28 +1,26 @@
 import prompt
 
-
 MAX_ROUNDS = 3
 
 
 def play(game):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    count_rounds = 0
+    print(f'Hello, {name}')
+
     print(game.RULE)
 
-    while count_rounds < MAX_ROUNDS:
-        count_rounds += 1
-        question, correct_answer = game.generate_round()
-        answer = prompt.string(f'Question: {question} ')
-        print(f'Your answer: {answer}')
+    for _ in range(MAX_ROUNDS):
+        question, answer = game.get_numbers()
 
-        if answer == correct_answer:
+        print(f'Question: {question}')
+        user_answer = prompt.string('Your answer: ')
+
+        if user_answer == answer:
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{correct_answer}'. "
-                  f"Let's try again, {name}!")
-            return
-
-    print(f'Congratulations, {name}!')
+            print(f"{user_answer} is wrong answer ;(. Correct answer "
+                  f"was {answer}. \nLet's try again, {name}!")
+            break
+    else:
+        print(f'Congratulations, {name}!')
