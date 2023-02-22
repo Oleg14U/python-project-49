@@ -1,7 +1,7 @@
 from random import randint
 
 
-DESCRIPTION = 'What number is missing in the progression?'
+Rule = 'What number is missing in the progression?'
 MIN_NUMBER_STEP = 1  # Min step
 MAX_NUMBER_STEP = 5  # Max step
 START_NUMBER = randint(1, 20)  # Initial number
@@ -10,7 +10,7 @@ LENGTH = 10  # Amount of numbers
 
 
 def generate_progression(start, stop, step):
-    progression = list(range(start, stop, step))[:LENGTH]
+    progression = list(range(start, stop, step))[5:LENGTH]
     return progression
 
 
