@@ -9,11 +9,11 @@ def start_game(game):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     count_rounds = 0
-    print(game.DESCRIPTION)
+    print(game.GAME_DESCRIPTION)
 
     while count_rounds < MAX_ROUNDS:
         count_rounds += 1
-        question, correct_answer = game.generate_round()
+        question, correct_answer = game.generate_game()
         answer = prompt.string(f'Question: {question} ')
         print(f'Your answer: {answer}')
 
