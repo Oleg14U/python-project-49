@@ -1,7 +1,7 @@
 from random import randint
 
 
-DESCRIPTION = 'What number is missing in the progression?'
+GAME_DESCRIPTION = 'What number is missing in the progression?'
 MIN_NUMBER_STEP = 1
 MAX_NUMBER_STEP = 5
 START_NUMBER = randint(1, 20)
@@ -14,7 +14,7 @@ def generate_progression(start, stop, step):
     return progression
 
 
-def generate_round():
+def generate_game():
     step = randint(MIN_NUMBER_STEP, MAX_NUMBER_STEP)
     progression = generate_progression(START_NUMBER, STOP_NUMBER, step)
     index = randint(0, len(progression) - 1)
