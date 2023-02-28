@@ -9,7 +9,7 @@ def start_game(game):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     count_rounds = 0
-    print(game.GAME_DESCRIPTION)
+    print(game.GAME_RULE)
 
     while count_rounds < MAX_ROUNDS:
         count_rounds += 1

@@ -1,7 +1,7 @@
 from random import randint
 
 
-GAME_DESCRIPTION = 'What number is missing in the progression?'
+GAME_RULE = 'What number is missing in the progression?'
 MIN_NUMBER_STEP = 1
 MAX_NUMBER_STEP = 5
 START_NUMBER = randint(1, 20)

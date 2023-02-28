@@ -1,7 +1,7 @@
 from random import randint, choice
 
 
-GAME_DESCRIPTION = 'What is the result of the expression?'
+GAME_RULE = 'What is the result of the expression?'
 MIN_NUMBER = 1
 MAX_NUMBER = 10
 OPERATORS = ['+', '-', '*']
